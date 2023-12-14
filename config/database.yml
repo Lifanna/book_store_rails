@@ -25,17 +25,24 @@
 #   database: db/production.sqlite3
 
 
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   username: postgres
+#   password: cao95records
+#   host: localhost
+#   port: 5432
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: cao95records
-  host: localhost
+  username: makarsanek
+  password: UFNN6BC_Zd467WN3
+  host: pg3.sweb.ru
   port: 5432
 
 development:
   <<: *default
-  database: book_store_rails
+  database: makarsanek
 
 test:
   <<: *default
