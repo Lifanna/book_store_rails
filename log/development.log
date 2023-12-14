@@ -5401,3 +5401,26 @@ FOREIGN KEY ("blob_id")
   [1m[36mTRANSACTION (89.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (82.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7421439070859667630)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (79.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-12-14 22:25:33 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (80.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 256.1ms | Allocations: 59441)
+Completed 200 OK in 305ms (Views: 269.1ms | ActiveRecord: 0.0ms | Allocations: 66549)
+
+
+Started GET "/books/new" for ::1 at 2023-12-14 22:25:38 +0600
+Processing by HomeController#new_book as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/new_book.html.erb within layouts/application
+  [1m[36mAuthor Load (81.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/home/new_book.html.erb:23
+  [1m[36mGenre Load (79.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/home/new_book.html.erb:30
+  Rendered home/new_book.html.erb within layouts/application (Duration: 212.4ms | Allocations: 5109)
+  Rendered layout layouts/application.html.erb (Duration: 219.6ms | Allocations: 7898)
+Completed 200 OK in 727ms (Views: 60.0ms | ActiveRecord: 528.7ms | Allocations: 32036)
+
+

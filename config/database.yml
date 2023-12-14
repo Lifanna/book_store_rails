@@ -46,8 +46,8 @@ development:
 
 test:
   <<: *default
-  database: book_store_rails
+  database: makarsanek
 
 production:
   <<: *default
-  database: book_store_rails
+  database: makarsanek
